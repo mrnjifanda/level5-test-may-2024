@@ -1,0 +1,66 @@
+<div class="dashboard">
+    <div class="all">
+        <div class="title">Dashboard</div>
+        <div class="center">
+            <div class="button">
+                <button class="btn" routerLink="/addcontact"> New Contact
+                </button>
+            </div>
+            <div class="button">
+                <button class="btn" routerLink="/adduser"> New User
+                </button>
+            </div>
+        </div>
+        <div class="intro">
+            <p>List of Contacts</p>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Full Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Added_by</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @for (contact of contacts; track contact) {
+                        <tr>
+                            <td data-label="N°">1</td>
+                            <td data-label="Title">{{ contact.fullname }}</td>
+                            <td data-label="Title">{{ contact.phone }}</td>
+                            <td data-label="Title">{{ contact.email }}</td>
+                            <td data-label="Title">{{ contact.added_by }}</td>
+                            <td data-label="Date°">{{ post.created_at }}</td>
+                            <td data-label="Actions">
+                                <a routerLink="/editcontact/{{ contact._id }}">Edit</a> | <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                    } @empty {
+                        <tr>
+                            <td colspan="4">Not post, please enter</td>
+                        </tr>
+                    }
+                  <!-- <tr>
+                    <td data-column="First Name"></td>
+                    <td data-column="Last Name"></td>
+                    <td data-column="Job Title"></td>
+                    <td data-column="Twitter"></td>
+                    <td>
+                        <div class="center">
+                            <button class="buttons">
+                                Edit
+                              </button> |
+                              <button id="two" class="buttons">
+                                Delete
+                              </button>
+                        </div>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
