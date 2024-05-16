@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="mx-auto w-4/5">
+        <h2 class="text-3xl my-8 font-bold">Add Contact
+        </h2>
+        <form [formGroup]="contactForm" class=" space-y-4" (submit)="submit()"  method="post">
+            <div class="flex">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 space-x-2">
+                        <label for="fullname">fullname</label>
+                        <input type="text" name="fullname" id="fullname" formControlName="fullname" class="border-2 border-black">
+                    </div>
+                    <div class="grid grid-cols-2 space-x-2">
+                        <label for="phone">phone</label>
+                        <input type="number" class="border-2 border-black" name="phone" id="phone" formControlName="phone">
+                    </div>
+                    <div class="grid grid-cols-2 space-x-2">
+                        <label for="email">email</label>
+                        <input type="email" class="border-2 border-black" name="email" id="email" formControlName="email">
+                    </div>
+                <div class="grid grid-cols-2 space-x-2">
+               
+                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select  id="added_by"
+                    formControlName="added_by"
+                        class="border-black border-2">
+                        
+                        <option *ngFor="let item of users" value="{{item._id}}" >{{item.firstname}}</option>
+                    </select>
+                
+
+                </div>
+                </div>
+
+            </div>
+
+            <div class=" flex space-x-2 flex-end">
+                <button type="submit"
+                    class="border-2 border-black font-semibold shadow-2xl bg-white hover:bg-black hover:text-white shadow-black p-1">Create</button>
+              
+            </div>
+        </form>
+    </div>
+</div>

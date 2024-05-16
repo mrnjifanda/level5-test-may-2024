@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="mx-auto w-4/5">
+        <h2 class="text-3xl my-8 font-bold">Add User
+        </h2>
+        <form class=" space-y-4" [formGroup]="userForm" (submit)="submit()">
+            <div class="flex">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 space-x-2">
+                        <label for="firstname">fullname</label>
+                        <input type="text" name="firstname" id="firstname" class="border-2 border-black" formControlName="firstname">
+                    </div>
+                    <div class="grid grid-cols-2 space-x-2">
+                        <label for="lastname">lastname</label>
+                        <input type="text" class="border-2 border-black" name="lastname" id="lastname" formControlName="lastname">
+                    </div>
+                   
+                    <div class="grid grid-cols-2 space-x-2">
+
+                        <label for=""
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                            option</label>
+                        <select id="category" formControlName="category" name="category" class="border-black border-2">
+                            <option selected value="User">User</option>
+                            <option value="Admin">Admin</option>
+
+                           
+                        </select>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class=" flex space-x-2 flex-end">
+                <button type="submit"
+                    class="border-2 border-black font-semibold shadow-2xl bg-white hover:bg-black hover:text-white shadow-black p-1">Create</button>
+
+            </div>
+        </form>
+    </div>
+</div>

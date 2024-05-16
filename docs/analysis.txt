@@ -1,0 +1,17 @@
+Analysis
+Entities
+-User
+-Contact
+
+The relationship between the two entities is a 1 to many relationshi whereby one user can have many contacts and many contacts can have one user 
+
+User atributes
+-firstname: users firstname
+-lastname: users lastname
+-category : user can either be a user or an admin
+
+Contact atributes
+-fullname: contacts fullname
+-email: contacts email
+-phone: users phone number
+-Added_by: the id of the user who created the contact 
