@@ -1,0 +1,30 @@
+                        PREMIER TEST LEVEL-5 PRATIQUE          
+
+
+        1-) Voici mes entités :   User        et        Contact .
+
+
+
+        2-) Voici les attributs de chaque entités :
+
+            User    
+        {
+            + first name , 
+            + last name , 
+            + category
+        };
+
+
+            Contact
+        {
+            + id_User,
+            + full name , 
+            + phone , 
+            + email , 
+            + adress
+        };
+
+
+        3-) Les relations entre ces deux entités sont One to Many
+
+        
