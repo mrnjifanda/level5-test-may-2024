@@ -1,0 +1,2 @@
+USER(firstname,lastname,category[admin,user],Foreign Key CONTACT);
+CONTACT(fullname,phone,email);

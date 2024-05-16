@@ -1,0 +1,29 @@
+.body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    h1 {
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+
+    .buttons {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25%;
+
+        button {
+            padding: 5px;
+            box-shadow: black;
+            border-radius: 5px;
+            &:hover{
+                cursor:pointer;
+                color: white;
+                background-color: black;
+        }
+        }
+    }
+    
+}

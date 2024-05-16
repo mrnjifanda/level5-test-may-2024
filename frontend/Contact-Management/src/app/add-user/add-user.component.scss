@@ -1,0 +1,32 @@
+.body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    h1 {
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+
+    .contact {
+        width: 30rem;
+        .fields {
+          display: flex;
+          flex-direction: column;
+            input,select{
+                margin-top: 5%;
+            }
+        }
+        button{
+            margin-top: 3%;
+            margin-left: 80%;
+            border-radius: 4px;
+            padding: 5px;
+             &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: black;
+             }
+        }
+    }
+}
